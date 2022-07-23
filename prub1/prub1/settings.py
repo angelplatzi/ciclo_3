@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'database',
+    'login',
     'rest_framework',
 ]
 
@@ -77,7 +78,7 @@ ROOT_URLCONF = 'prub1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['prub1\database\Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
