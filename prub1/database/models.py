@@ -31,4 +31,3 @@ class factura_producto(models.Model):
     Id_producto=models.ForeignKey(producto,null=True,blank=True,on_delete=models.CASCADE)
     Id_factura=models.ForeignKey(factura,null=True,blank=True,on_delete=models.CASCADE)
     cantidad=models.IntegerField(null=True,blank=True)
-   
