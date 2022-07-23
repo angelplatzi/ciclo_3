@@ -58,7 +58,7 @@ ROOT_URLCONF = 'prub1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/haner/Documents/python/prueba1/prub1/loginandregistrer/main'],
+        'DIRS': ['loginandregistrer/main'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
