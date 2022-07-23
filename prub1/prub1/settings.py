@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 # Application definition
 
@@ -78,7 +81,7 @@ ROOT_URLCONF = 'prub1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['prub1\database\Templates'],
+        'DIRS': ['prub1/database/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
