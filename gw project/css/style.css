@@ -62,3 +62,12 @@ padding-top: 0!important;
 .section-qual{
     margin-bottom: 4rem;
 }
+.nav-link:hover{
+    color: cornflowerblue !important;;
+}
+.fa-solid:hover{
+    color: cornflowerblue!important;
+}
+.fa-solid{
+    margin-left: 1rem;
+}
