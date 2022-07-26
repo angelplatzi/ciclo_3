@@ -13,5 +13,5 @@ def register_request(request):
 			return redirect("homepage")
 		messages.error(request, "Unsuccessful registration. Invalid information.")
 	form = NewUserForm()
-	return render (request=request, template_name="register.html")
+	return render (request, "register.html")
 
