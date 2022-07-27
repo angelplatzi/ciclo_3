@@ -1,4 +1,19 @@
-{% for producto in productos %}
-    {{producto.nombre_producto}}
-    <img src="{{producto.imagen.url}}" alt="">
+<table border="3px solid purple">
+    <thead>
+        <tr>
+            <th>nombre</th>
+            <th>imagen</th>
+            <th>añadir</th>
+        </tr>
+    </thead>
+{% for producto in productos %}    
+        <tbody>
+            <tr>
+                <th>{{producto.nombre_producto}}</th>
+                <th><img src="{{producto.imagen.url}}" alt="" width="200px"></th>
+                <th><button name="submit">carrito</button></th>
+            </tr>
+        </tbody>
+    
 {% endfor %}
+</table>

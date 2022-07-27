@@ -9,9 +9,8 @@ def register_request(request):
 		if form.is_valid():
 			user = form.save()
 			login(request, user)
-			messages.success(request, "Registration successful." )
 			return redirect("homepage")
-		messages.error(request, "Unsuccessful registration. Invalid information.")
+		messages.success(request, "regitro no exitoso" )
 	form = NewUserForm()
 	return render (request, "register.html")
 

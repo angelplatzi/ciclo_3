@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'database',
-    'loginandregistrer',
+    'registrer',
     'tienda',
+    'carro'
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'prub1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['loginandregistrer/templates','tienda/templates'],
+        'DIRS': ['registrer/templates','tienda/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
