@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu carrito-GW PARTS</title>
+    <title>Sing in-GW PARTS</title>
      <!-- CSS only -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
      <!-- JavaScript Bundle with Popper -->
@@ -12,12 +12,12 @@
      <!-- FRAMEWORK BOOTSTRAP -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     
      <script src="https://kit.fontawesome.com/8bc46edd81.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/singin.css">
      <link rel="shortcut icon" href="../recursos/ISOTIPO_Mesa_de_trabajo_1_x50@2x.webp" />
-     <link rel="stylesheet" href="../css/cart.css">
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse">
           <a href="../html/index.html"><img src="../recursos/332150.svg" height="24" alt=""></a>
@@ -35,51 +35,50 @@
             </ul>
             <ul class="nav justify-content-end">
               <li class="nav-item">
-                <span class="navbar-text"><a class="nav-link active" href="#"><i class="fa-solid fa-cart-shopping" height="30"></i></a></span>
+                <span class="navbar-text"><a class="nav-link active" href="../html/login.html">Iniciar Sesión</a></span>
+              </li>
+              <li class="nav-item">
+                <span class="navbar-text"><a class="nav-link active" href="../html/shopping_car.html"><i class="fa-solid fa-cart-shopping" height="30"></i></a></span>
               </li>
             </ul>
           </div>
         </div>
-    </nav>
+      </nav>
 
-    <main>
-        <div class="cart-title">
-            <h2 class="h1" align="center">Carrito de Compra</h2>
-            <figure class="text-center">
-                <blockquote class="blockquote">
+      <main>
+        <div class="modal-dialog text-center">
+            <div class="col-sm-8 carta">
+                <div class="modal-content card text-bg-dark mb-3">
                     <br>
-                  <p>Continue explorando <a href="../html/index.html">aqui</a></p>
-                </blockquote>
-            </figure>
-
-        </div>
-
-        <section class="products">
-            <div class="table-title">
-
-                <p><b>Cantidad</b></p>
-                <p><b>Precio</b></p>
-            </div>
-            <hr class="one">
-
-            <div class="prod">
-                <div class="prod-logo">
-                    <img src="../recursos/bicicleta-electrica-bogota.webp" alt="bicicleta electrica" width="100%">
+                    <form class="col-12">
+                        <div class="row">
+                            <div class="form-group col">
+                                <input type="text" id="" required placeholder="Nombre" class="form-control">
+                            </div>
+                            <div class="form-group col">
+                              <input type="text" id="" required placeholder="Apellido" class="form-control">
+                            </div>
+                            <br><br><br>
+                            <div class="form-group">
+                              <input type="email" required placeholder="ejemplo@gmail.com" class="form-control">
+                            </div>
+                            <br><br><br>
+                              <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Contraseña">
+                              </div>
+                              <br><br><br>
+                              <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Confirmar contraseña">
+                              </div>
+                              <br><br><br>
+                              <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn">Crear Cuenta</button>
+                              </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="prod-nom">
-                    <p >Bicicleta Electrica Bogotá</p>
-                    <button type="button" class="btn btn-outline-danger">Eliminar</button>
-                </div>   
-                <div class="table-title">
-
-                  <p><b>Cantidad</b></p>
-                  <p><b>Precio</b></p>
-              </div>
             </div>
-            
-            
-        </section>
-    </main>
-
+        </div>
+      </main>
 </body>
 </html>

@@ -43,7 +43,7 @@
     border-radius: 5%;
 
 }
-.prod-info{
+.prod-nom{
     margin-top:1rem;
 }
 .btn{
@@ -56,4 +56,13 @@
 .prod-logo{
     display: flex;
     width: 15%;
+}
+.prod-info p{
+    font-size: 1.25rem;
+    display: inline-block;
+    margin-left:3rem;
+    text-align: end;
+}
+.prod-info{
+    display: inline-flex;
 }
