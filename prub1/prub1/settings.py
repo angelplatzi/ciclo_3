@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = 'logueando'
+LOGOUT_REDIRECT_URL = '/'
+
 
 # Application definition
 
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'database',
+    'login',
     'rest_framework',
 ]
 
@@ -77,7 +81,7 @@ ROOT_URLCONF = 'prub1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['prub1/database/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,12 +102,12 @@ WSGI_APPLICATION = 'prub1.wsgi.application'
 
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'd2849780dass5r',
-    'USER': 'lltzhwferrguvc',
-    'PASSWORD': '2177d4388fb4cf760173035f619b634930b8f700eb9bac0fffa74646223bd8b3',
-    'HOST': 'ec2-34-235-31-124.compute-1.amazonaws.com',
-    'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd2849780dass5r',
+        'USER': 'lltzhwferrguvc',
+        'PASSWORD': '2177d4388fb4cf760173035f619b634930b8f700eb9bac0fffa74646223bd8b3',
+        'HOST': 'ec2-34-235-31-124.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -130,7 +134,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
