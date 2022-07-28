@@ -18,10 +18,27 @@
 </head>
 <body>
 
+  {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+
+{% endif %}
     {% if request.session.carro.items %}
+      <table border="3px solid purple">
         {% for key, value in request.session.carro.items%}
-          <p>{{key}} cantidad {{value.cantidad}}</p>
+        <tr>
+          <th>cantidad {{value.cantidad}}</th>
+          <th>nombre {{value.producto}}</th>
+          <th>imagen</th>
+          <th>precio {{value.precio}}</th>
+        </tr>
+
         {% endfor %}
+      </table>
+        <a href="{% url 'carro:limpiar' %}">limpiar</a>
     {%else%}
       <p>no hay</p>
     {% endif %}

@@ -11,7 +11,9 @@ class carro:
     def agregar(self,producto):
         if (str(producto.ID_producto) not in self.carro.keys()):
             self.carro[producto.ID_producto]={
-                'producto_id':producto.ID_producto,
+                'producto':producto.nombre_producto,
+                'imagen':producto.imagen.url,
+                'precio':producto.precio_unitario,
                 'cantidad':1,
             }
         else:
@@ -39,5 +41,10 @@ class carro:
             del self.carro[producto.ID_producto]
             self.guardar_carro()
 
-    def limpiar(self):
+    def limpiarcarrito(self):
         self.carro={}
+        self.guardar_carro()
+    
+    def __str__(self) -> str:
+        datos="cantidad "+str(len(self.carro))
+        return datos

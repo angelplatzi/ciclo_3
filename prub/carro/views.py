@@ -1,13 +1,16 @@
 from ast import Return
 from django.shortcuts import render, redirect
 from database.models import producto
+from django.contrib import messages
 from carro.carro import carro as carroshop
 from database.models import producto as Productos
+
+
 def carrito(request):
-    #car=carrito
     if request.user.is_authenticated:
         return render(request,'html/shopping_car.html')
     else:
+        messages.add_message(request=request,level=messages.INFO ,message="inicia sesion primero" )
         return redirect("tienda")
 
 def agregar_producto(request,producto_id):
@@ -15,7 +18,9 @@ def agregar_producto(request,producto_id):
         car=carroshop(request)
         producto=Productos.objects.get(ID_producto=producto_id)
         car.agregar(producto)
-        return render(request,'html/shopping_car.html')
+        messages.add_message(request=request,level=messages.INFO ,message="producto agregado" )
+        return redirect("tienda")
+    messages.add_message(request=request,level=messages.INFO ,message="inicia sesion primero" )
     return redirect("tienda")
 
 def restar(request,producto_id):
@@ -32,6 +37,7 @@ def eliminar(request,producto_id):
 
 
 def limpiar(request):
-    car=carroshop(request)
-    car.limpiar
-    return redirect("tienda")
+    car=carroshop(request=request)
+    car.limpiarcarrito()
+    messages.add_message(request=request,level=messages.INFO ,message=str(car) )
+    return render(request,'html/shopping_car.html')
