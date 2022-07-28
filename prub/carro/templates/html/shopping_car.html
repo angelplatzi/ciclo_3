@@ -18,68 +18,13 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="collapse navbar-collapse">
-          <a href="../html/index.html"><img src="../recursos/332150.svg" height="24" alt=""></a>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav mr-auto" style="--bs-scroll-height: 100px;">
-              <li class="user-icon"><a href="#"><i class="fa-solid fa-user text-light" height="30"></i></a></li>
-            </ul>
-            <ul class="nav justify-content-center mr-auto">
-                <li class="nav-item">
-                    <span class="navbar-text"><a class="nav-link active" href="#">Bicicletas</a></span>
-                  </li>
-                  <li class="nav-item">
-                    <span class="navbar-text"><a class="nav-link active" href="#">Accesorios</a></span>
-                  </li>
-            </ul>
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <span class="navbar-text"><a class="nav-link active" href="#"><i class="fa-solid fa-cart-shopping" height="30"></i></a></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-
-    <main>
-        <div class="cart-title">
-            <h2 class="h1" align="center">Carrito de Compra</h2>
-            <figure class="text-center">
-                <blockquote class="blockquote">
-                    <br>
-                  <p>Continue explorando <a href="../html/index.html">aqui</a></p>
-                </blockquote>
-            </figure>
-
-        </div>
-
-        <section class="products">
-            <div class="table-title">
-
-                <p><b>Cantidad</b></p>
-                <p><b>Precio</b></p>
-            </div>
-            <hr class="one">
-
-            <div class="prod">
-                <div class="prod-logo">
-                    <img src="../recursos/bicicleta-electrica-bogota.webp" alt="bicicleta electrica" width="100%">
-                </div>
-                <div class="prod-nom">
-                    <p >Bicicleta Electrica Bogotá</p>
-                    <button type="button" class="btn btn-outline-danger">Eliminar</button>
-                </div>   
-                <div class="table-title">
-
-                  <p><b>Cantidad</b></p>
-                  <p><b>Precio</b></p>
-              </div>
-            </div>
-            
-            
-        </section>
-    </main>
+    {% if request.session.carro.items %}
+        {% for key, value in request.session.carro.items%}
+          <p>{{key}} cantidad {{value.cantidad}}</p>
+        {% endfor %}
+    {%else%}
+      <p>no hay</p>
+    {% endif %}
 
 </body>
 </html>

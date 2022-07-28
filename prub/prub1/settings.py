@@ -60,7 +60,7 @@ ROOT_URLCONF = 'prub1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['registrer/templates','tienda/templates','carro/templates'],
+        'DIRS': ['registrer/templates','tienda/templates','carro/templates','prub1/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -11,7 +11,7 @@
             <tr>
                 <th>{{producto.nombre_producto}}</th>
                 <th><img src="{{producto.imagen.url}}" alt="" width="200px"></th>
-                <th><button name="submit">carrito</button></th>
+                <th><a href="{% url 'carro:agregar' producto.ID_producto %}">carro</a></th>
             </tr>
         </tbody>
     
