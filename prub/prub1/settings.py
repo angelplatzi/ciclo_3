@@ -42,13 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'database',
-<<<<<<< HEAD:prub1/prub1/settings.py
     'login',
     'rest_framework',
-=======
     'loginandregistrer',
     'tienda',
->>>>>>> DevHanner:prub/prub1/settings.py
 ]
 
 MIDDLEWARE = [
@@ -67,11 +64,8 @@ ROOT_URLCONF = 'prub1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD:prub1/prub1/settings.py
         'DIRS': ['prub1/database/templates'],
-=======
         'DIRS': ['loginandregistrer/templates','tienda/templates'],
->>>>>>> DevHanner:prub/prub1/settings.py
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

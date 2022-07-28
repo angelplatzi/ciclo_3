@@ -12,7 +12,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("register/", include('loginandregistrer.urls')),
     path('tienda/',include('tienda.urls')),
-    path('', include('login.urls')),
+    path('login/', include('login.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
 
