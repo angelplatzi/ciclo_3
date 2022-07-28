@@ -13,8 +13,23 @@ class carro:
             self.carro[producto.id]={
                 'producto_id':producto.id,
                 'nombre':producto.nombre_producto,
-                'precio':producto.precio_unitario,
+                'precio':str(producto.precio_unitario),
                 'cantidad':1,
                 'imagen':producto.imagen.url,
-                
             }
+        else:
+            for key, value in self.carro.items():
+                if key==str(producto.id):
+                    value['cantida']+=1
+                    break
+        self.guardar_carro()
+
+    def guardar_carro(self):
+        self.session['carro']=self.carro
+        self.carro.modified=True
+    
+    def eliminar(self,producto):
+        producto.id=str(producto.id)
+        if producto.id in self.carro:
+            del self.carro[producto.id]
+            self.guardar_carro()
